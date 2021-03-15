@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
 
         buttonConvert.setOnClickListener {
-           // var result = converseWeight(input.toString().toDouble())
+            // var result = converseWeight(input.toString().toDouble())
             // resultId.text = "On the moon your weight is $result"
         }
 
@@ -37,25 +37,23 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         var isChecked: Boolean = v.isChecked
         var input = inputId.text
 
-        when(v.id){
-            R.id.moonCheckbox -> if (isChecked && !TextUtils.isEmpty(inputId.text.toString())){
+        when (v.id) {
+            R.id.moonCheckbox -> if (isChecked && !TextUtils.isEmpty(inputId.text.toString())) {
                 converseWeight(input.toString().toDouble(), v)
                 marsCheckbox.isChecked = false
                 jupiterCheckbox.isChecked = false
             }
-            R.id.marsCheckbox -> if (isChecked && !TextUtils.isEmpty(inputId.text.toString())){
+            R.id.marsCheckbox -> if (isChecked && !TextUtils.isEmpty(inputId.text.toString())) {
                 converseWeight(input.toString().toDouble(), v)
                 moonCheckbox.isChecked = false
                 jupiterCheckbox.isChecked = false
             }
-            R.id.jupiterCheckbox -> if (isChecked && !TextUtils.isEmpty((inputId.text.toString()))){
+            R.id.jupiterCheckbox -> if (isChecked && !TextUtils.isEmpty((inputId.text.toString()))) {
                 converseWeight(input.toString().toDouble(), v)
                 moonCheckbox.isChecked = false
                 marsCheckbox.isChecked = false
             }
         }
-
-
 
         // Example: Using Log:
 
@@ -80,10 +78,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     fun converseWeight(weight: Double, checkBox: CheckBox) {
         var result: Double?
-        when(checkBox.id){
-            R.id.moonCheckbox ->  {
+        when (checkBox.id) {
+            R.id.moonCheckbox -> {
                 result = weight * moonGravity
-                                                    // I'm calling the function format (It's below)
+                // I'm calling the function format (It's below)
                 resultId.text = "On the moon your weight is ${result.format(2)}"
             }
             R.id.marsCheckbox -> {
