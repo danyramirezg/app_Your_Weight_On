@@ -16,51 +16,87 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.662" />
+        app:layout_constraintVertical_bias="0.776" />
 
     <TextView
         android:id="@+id/whatWeightId"
         android:layout_width="324dp"
         android:layout_height="50dp"
-        android:layout_marginTop="68dp"
         android:text="@string/title_weight"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.11" />
 
     <EditText
         android:id="@+id/inputId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="164dp"
         android:ems="10"
         android:hint="@string/hint_weight"
         android:inputType="textPersonName"
         android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/whatWeightId" />
+        app:layout_constraintTop_toBottomOf="@+id/whatWeightId"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/buttonConvert"
         android:layout_width="194dp"
         android:layout_height="91dp"
-        android:layout_marginTop="64dp"
         android:backgroundTint="@color/purple_200"
         android:text="Convert weight"
         android:textColor="@color/black"
         android:textColorHint="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/resultId"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputId" />
+        app:layout_constraintTop_toBottomOf="@+id/inputId"
+        app:layout_constraintVertical_bias="0.559" />
+
+    <CheckBox
+        android:id="@+id/jupiterCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="48dp"
+        android:text="@string/jupiter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whatWeightId" />
+
+    <CheckBox
+        android:id="@+id/marsCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="48dp"
+        android:text="@string/mars"
+        app:layout_constraintEnd_toStartOf="@+id/jupiterCheckbox"
+        app:layout_constraintTop_toBottomOf="@+id/whatWeightId" />
+
+    <CheckBox
+        android:id="@+id/moonCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/moon"
+        app:layout_constraintEnd_toStartOf="@+id/marsCheckbox"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whatWeightId" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

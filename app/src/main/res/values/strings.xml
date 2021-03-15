@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">YourWeightOn</string>
-    <string name="title_weight">What is your Weight on the Moon?</string>
+    <string name="title_weight">What is your Weight on...?</string>
     <string name="hint_weight">Introduce your weight (pounds)</string>
+    <string name="mars">Mars</string>
+    <string name="moon">Moon</string>
+    <string name="jupiter">Jupiter</string>
 </resources>
