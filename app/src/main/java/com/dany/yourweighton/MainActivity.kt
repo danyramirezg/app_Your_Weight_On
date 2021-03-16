@@ -6,6 +6,7 @@ import android.text.TextUtils
 import android.util.Log
 import android.view.View
 import android.widget.CheckBox
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 // Adding a new View.OnClick and implement all members
@@ -15,14 +16,20 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     val marsGravity = 0.38F
     val jupiterGravity = 2.34f
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
 
+        // A toast is a view containing a quick little message for the user:
+        Toast.makeText(this, "Welcome to this app!", Toast.LENGTH_LONG).show()
+
+
         buttonConvert.setOnClickListener {
             // var result = converseWeight(input.toString().toDouble())
             // resultId.text = "On the moon your weight is $result"
+
         }
 
         // I need to register the checkboxes if I want to see them in Log:
@@ -33,9 +40,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
+
+
+
+
         v as CheckBox // Casting the CheckBox from activity_main.xml
         var isChecked: Boolean = v.isChecked
         var input = inputId.text
+
+
 
         when (v.id) {
             R.id.moonCheckbox -> if (isChecked && !TextUtils.isEmpty(inputId.text.toString())) {
