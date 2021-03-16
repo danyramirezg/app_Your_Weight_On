@@ -41,14 +41,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
 
-
-
-
         v as CheckBox // Casting the CheckBox from activity_main.xml
         var isChecked: Boolean = v.isChecked
         var input = inputId.text
-
-
 
         when (v.id) {
             R.id.moonCheckbox -> if (isChecked && !TextUtils.isEmpty(inputId.text.toString())) {
